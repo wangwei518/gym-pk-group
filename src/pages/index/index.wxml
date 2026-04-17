@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="hero card">
+    <text class="hero__title">{{title}}</text>
+    <text class="hero__subtitle">{{subtitle}}</text>
+  </view>
+
+  <view class="stats">
+    <block wx:for="{{stats}}" wx:key="label">
+      <view class="stats__item card">
+        <text class="stats__value">{{item.value}}</text>
+        <text class="stats__label">{{item.label}}</text>
+      </view>
+    </block>
+  </view>
+</view>

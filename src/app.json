@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "Gym PK Group",
+    "navigationBarBackgroundColor": "#111827",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f7fb",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

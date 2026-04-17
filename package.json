@@ -1,0 +1,19 @@
+{
+  "name": "gym-pk-group",
+  "version": "0.1.0",
+  "private": true,
+  "description": "WeChat Mini Program for gym PK group",
+  "scripts": {
+    "build": "npm run clean && tsc && cpx \"src/**/*.json\" dist && cpx \"src/**/*.wxml\" dist && cpx \"src/**/*.wxss\" dist && cpx \"src/**/*.png\" dist && cpx \"src/**/*.jpg\" dist && cpx \"src/**/*.svg\" dist",
+    "watch": "npm run clean && concurrently \"tsc -w\" \"cpx 'src/**/*.{json,wxml,wxss,png,jpg,svg}' dist -w\"",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "concurrently": "^9.0.1",
+    "cpx": "^1.5.0",
+    "miniprogram-api-typings": "^4.0.5",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3"
+  }
+}
