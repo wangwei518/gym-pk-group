@@ -1,6 +1,6 @@
 <view class="container auth-page">
   <view class="card auth-card">
-    <view class="section-title">先完善一下你的资料</view>
+    <view class="section-title">{{mode === 'edit' ? '编辑资料' : '先完善一下你的资料'}}</view>
     <view class="section-subtitle">头像和昵称会用于排行榜和个人页展示</view>
 
     <button class="avatar-button" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
@@ -11,5 +11,5 @@
     <input class="nickname-input" type="nickname" placeholder="请输入微信昵称" bindinput="onNicknameInput" value="{{nickName}}" />
   </view>
 
-  <button class="primary-button" bindtap="submitProfile" loading="{{loading}}">完成并进入</button>
+  <button class="primary-button" bindtap="submitProfile" loading="{{loading}}">{{mode === 'edit' ? '保存资料' : '完成并进入'}}</button>
 </view>

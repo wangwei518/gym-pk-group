@@ -38,5 +38,8 @@ Page({
     } finally {
       this.setData({ loading: false })
     }
+  },
+  goEditProfile() {
+    wx.navigateTo({ url: '/pages/auth/index?mode=edit' })
   }
 })

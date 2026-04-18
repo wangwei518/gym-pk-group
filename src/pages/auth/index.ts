@@ -1,10 +1,20 @@
-import { bootstrapUser } from '../../services/auth'
+import { bootstrapUser, updateUserProfile } from '../../services/auth'
 
 Page({
   data: {
     loading: false,
     nickName: '',
-    avatarUrl: ''
+    avatarUrl: '',
+    mode: 'create' as 'create' | 'edit'
+  },
+  onLoad(query: Record<string, string>) {
+    const mode = query.mode === 'edit' ? 'edit' : 'create'
+    const app = getApp<IAppOption>()
+    this.setData({
+      mode,
+      nickName: app.globalData.userInfo?.nickName || '',
+      avatarUrl: app.globalData.userInfo?.avatarUrl || ''
+    })
   },
   async onChooseAvatar(event: WechatMiniprogram.CustomEvent<{ avatarUrl: string }>) {
     this.setData({ avatarUrl: event.detail.avatarUrl })
@@ -26,11 +36,23 @@ Page({
 
     try {
       this.setData({ loading: true })
+      const app = getApp<IAppOption>()
+
+      if (this.data.mode === 'edit') {
+        const result = await updateUserProfile({
+          nickName,
+          avatarUrl: this.data.avatarUrl
+        })
+        app.globalData.userInfo = result.user
+        wx.showToast({ title: '资料已更新', icon: 'success' })
+        setTimeout(() => wx.navigateBack(), 400)
+        return
+      }
+
       const result = await bootstrapUser({
         nickName,
         avatarUrl: this.data.avatarUrl
       })
-      const app = getApp<IAppOption>()
       app.globalData.userInfo = result.user
       app.globalData.currentCircleId = result.user.defaultCircleId || ''
 

@@ -1,7 +1,12 @@
 <view class="container me-page">
   <view class="card profile-card" wx:if="{{user}}">
-    <view class="section-title">{{user.nickName}}</view>
-    <view class="section-subtitle">查看累计数据与历史打卡</view>
+    <view class="profile-head">
+      <view>
+        <view class="section-title">{{user.nickName}}</view>
+        <view class="section-subtitle">查看累计数据与历史打卡</view>
+      </view>
+      <button class="edit-button" bindtap="goEditProfile">编辑资料</button>
+    </view>
   </view>
 
   <circle-card wx:if="{{circle}}" circle="{{circle}}" />

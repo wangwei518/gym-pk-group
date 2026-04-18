@@ -10,3 +10,7 @@ export interface BootstrapUserResult {
 export const bootstrapUser = (payload: Partial<UserInfo>) => {
   return callCloudFunction<BootstrapUserResult>('bootstrapUser', payload)
 }
+
+export const updateUserProfile = (payload: Pick<UserInfo, 'nickName' | 'avatarUrl'>) => {
+  return callCloudFunction<{ user: UserInfo }>('updateUserProfile', payload)
+}
