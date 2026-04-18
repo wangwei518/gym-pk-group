@@ -1,7 +1,10 @@
 <view class="ranking-item {{item.isSelf ? 'ranking-item--self' : ''}}" wx:if="{{item}}">
   <view class="ranking-item__header">
-    <text class="ranking-item__rank">#{{item.rank}}</text>
-    <text class="ranking-item__name">{{item.nickName}}</text>
+    <view class="ranking-item__left">
+      <text class="ranking-item__rank">#{{item.rank}}</text>
+      <view class="ranking-item__avatar">{{item.nickName.slice(0, 1)}}</view>
+      <text class="ranking-item__name">{{item.nickName}}</text>
+    </view>
     <text class="ranking-item__value">{{item.value}}</text>
   </view>
   <view class="ranking-item__track">

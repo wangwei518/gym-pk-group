@@ -6,9 +6,12 @@
 
   <sport-tabs tabs="{{sportTabs}}" current="{{type}}" bind:change="onTypeChange" />
 
-  <view class="card">
+  <view class="card input-card">
+    <view class="input-title">输入运动量</view>
     <input class="input" type="digit" placeholder="请输入运动量" value="{{value}}" bindinput="onValueInput" />
+    <view class="input-hint" wx:if="{{type === 'run'}}">跑步支持 1 位小数，例如 3.5</view>
+    <view class="input-hint" wx:else>当前项目仅支持正整数</view>
   </view>
 
-  <button class="primary-button" bindtap="submit">提交打卡</button>
+  <button class="primary-button" bindtap="submit" loading="{{loading}}">提交打卡</button>
 </view>

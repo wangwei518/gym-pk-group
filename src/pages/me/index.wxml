@@ -14,19 +14,19 @@
   <view class="card" wx:if="{{totals}}">
     <view class="section-title">累计数据</view>
     <view class="stats-grid">
-      <view class="stats-item">
+      <view class="stats-item accent-blue">
         <text class="stats-value">{{totals.totalPullup}}</text>
         <text class="stats-label">引体向上</text>
       </view>
-      <view class="stats-item">
+      <view class="stats-item accent-green">
         <text class="stats-value">{{totals.totalRope}}</text>
         <text class="stats-label">跳绳</text>
       </view>
-      <view class="stats-item">
+      <view class="stats-item accent-purple">
         <text class="stats-value">{{totals.totalRock}}</text>
         <text class="stats-label">攀岩</text>
       </view>
-      <view class="stats-item">
+      <view class="stats-item accent-orange">
         <text class="stats-value">{{totals.totalRun}}</text>
         <text class="stats-label">跑步</text>
       </view>
@@ -37,9 +37,11 @@
     <view class="section-title">历史打卡</view>
     <block wx:if="{{records.length}}">
       <view class="record-item" wx:for="{{records}}" wx:key="recordId">
-        <text>{{item.type}}</text>
-        <text>{{item.value}}</text>
-        <text>{{item.date}}</text>
+        <view class="record-main">
+          <text class="record-type">{{item.type}}</text>
+          <text class="record-date">{{item.date}}</text>
+        </view>
+        <text class="record-value">{{item.value}}</text>
       </view>
     </block>
     <empty-state wx:else title="还没有打卡记录" subtitle="今天先打一次卡吧" />

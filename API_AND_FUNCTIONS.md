@@ -44,6 +44,7 @@
 可选补充：
 8. `getCircleDetail`
 9. `getShareInfo`
+10. `updateUserProfile`
 
 ---
 
@@ -444,6 +445,7 @@ interface GetShareInfoOutput {
 ## 4.1 auth.ts
 ```ts
 bootstrapUser(payload: BootstrapUserInput): Promise<BootstrapUserOutput>
+updateUserProfile(payload: { nickName: string; avatarUrl: string }): Promise<{ user: UserInfo }>
 ```
 
 ## 4.2 circle.ts
@@ -497,6 +499,7 @@ getMyProfile(payload: GetMyProfileInput): Promise<GetMyProfileOutput>
 ### 5.6 个人页
 - 页面加载 -> `getMyProfile`
 - 历史记录区域 -> `getMyRecords`
+- 编辑资料 -> `updateUserProfile`
 
 ---
 

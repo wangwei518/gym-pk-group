@@ -34,28 +34,54 @@
 }
 
 .stats-item {
-  background: #f8fafc;
   border-radius: 20rpx;
   padding: 24rpx;
   display: flex;
   flex-direction: column;
   gap: 12rpx;
+  color: #fff;
 }
+
+.accent-blue { background: linear-gradient(135deg, #2563eb, #60a5fa); }
+.accent-green { background: linear-gradient(135deg, #059669, #34d399); }
+.accent-purple { background: linear-gradient(135deg, #7c3aed, #a78bfa); }
+.accent-orange { background: linear-gradient(135deg, #ea580c, #fb923c); }
 
 .stats-value {
   font-size: 42rpx;
   font-weight: 700;
-  color: #2563eb;
 }
 
 .stats-label {
-  color: #6b7280;
+  opacity: 0.9;
 }
 
 .record-item {
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  gap: 12rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16rpx;
   padding: 20rpx 0;
   border-bottom: 1rpx solid #e5e7eb;
+}
+
+.record-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.record-type {
+  font-weight: 600;
+}
+
+.record-date {
+  font-size: 24rpx;
+  color: #6b7280;
+}
+
+.record-value {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #2563eb;
 }

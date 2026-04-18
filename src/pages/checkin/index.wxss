@@ -4,8 +4,24 @@
   gap: 24rpx;
 }
 
+.input-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.input-title {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
 .input {
   background: #f8fafc;
   border-radius: 16rpx;
   padding: 24rpx;
+}
+
+.input-hint {
+  font-size: 24rpx;
+  color: #6b7280;
 }
