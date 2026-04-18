@@ -1,13 +1,13 @@
-type SportType = 'pullup' | 'rope' | 'rock' | 'run'
+declare type SportType = 'pullup' | 'rope' | 'rock' | 'run'
 
-interface IUserInfo {
+declare interface IUserInfo {
   openid: string
   nickName: string
   avatarUrl: string
   defaultCircleId?: string
 }
 
-interface IAppOption {
+declare interface IAppOption {
   globalData: {
     userInfo: IUserInfo | null
     currentCircleId: string

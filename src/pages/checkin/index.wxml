@@ -1,0 +1,14 @@
+<view class="container checkin-page">
+  <view class="card">
+    <view class="section-title">记录今天的运动</view>
+    <view class="section-subtitle">仅支持当天打卡，不支持补录</view>
+  </view>
+
+  <sport-tabs tabs="{{sportTabs}}" current="{{type}}" bind:change="onTypeChange" />
+
+  <view class="card">
+    <input class="input" type="digit" placeholder="请输入运动量" value="{{value}}" bindinput="onValueInput" />
+  </view>
+
+  <button class="primary-button" bindtap="submit">提交打卡</button>
+</view>

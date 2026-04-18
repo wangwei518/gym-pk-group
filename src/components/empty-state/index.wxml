@@ -1,0 +1,4 @@
+<view class="card empty-state">
+  <view class="section-title">{{title}}</view>
+  <view class="section-subtitle" wx:if="{{subtitle}}">{{subtitle}}</view>
+</view>

@@ -1,0 +1,11 @@
+<view class="sport-tabs">
+  <view
+    wx:for="{{tabs}}"
+    wx:key="key"
+    class="sport-tab {{current === item.key ? 'sport-tab--active' : ''}}"
+    data-type="{{item.key}}"
+    bindtap="onTap"
+  >
+    {{item.label}}
+  </view>
+</view>

@@ -1,0 +1,29 @@
+.ranking-item {
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #e5e7eb;
+}
+
+.ranking-item--self {
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.ranking-item__header {
+  display: grid;
+  grid-template-columns: 80rpx 1fr auto;
+  gap: 12rpx;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.ranking-item__track {
+  height: 16rpx;
+  background: #e5e7eb;
+  border-radius: 999rpx;
+  overflow: hidden;
+}
+
+.ranking-item__bar {
+  height: 100%;
+  min-width: 8%;
+  background: linear-gradient(90deg, #60a5fa, #2563eb);
+}

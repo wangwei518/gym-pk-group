@@ -1,0 +1,8 @@
+<view class="container create-page">
+  <view class="card">
+    <view class="section-title">创建好友 PK 圈</view>
+    <view class="section-subtitle">邀请微信好友一起按天打卡、互相监督</view>
+    <input class="input" placeholder="输入 PK 圈名称" bindinput="onInput" value="{{name}}" />
+  </view>
+  <button class="primary-button" bindtap="submit">创建并进入</button>
+</view>

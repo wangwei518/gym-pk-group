@@ -1,0 +1,11 @@
+.checkin-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.input {
+  background: #f8fafc;
+  border-radius: 16rpx;
+  padding: 24rpx;
+}

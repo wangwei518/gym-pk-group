@@ -1,0 +1,4 @@
+<view class="card ranking-list">
+  <view class="section-title">好友 PK 排行</view>
+  <ranking-item wx:for="{{list}}" wx:key="openid" item="{{item}}" maxValue="{{maxValue}}" />
+</view>

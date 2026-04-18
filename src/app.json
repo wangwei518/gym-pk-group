@@ -1,6 +1,10 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/leaderboard/index",
+    "pages/me/index",
+    "pages/join-circle/index",
+    "pages/create-circle/index",
+    "pages/checkin/index"
   ],
   "window": {
     "navigationBarTitleText": "Gym PK Group",
@@ -8,6 +12,22 @@
     "navigationBarTextStyle": "white",
     "backgroundColor": "#f5f7fb",
     "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#6b7280",
+    "selectedColor": "#2563eb",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/leaderboard/index",
+        "text": "排行榜"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我的"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

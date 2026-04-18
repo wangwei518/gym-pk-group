@@ -5,6 +5,7 @@ page {
 }
 
 .container {
+  min-height: 100vh;
   padding: 32rpx;
   box-sizing: border-box;
 }
@@ -14,4 +15,30 @@ page {
   border-radius: 24rpx;
   padding: 32rpx;
   box-shadow: 0 12rpx 40rpx rgba(15, 23, 42, 0.08);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 24rpx;
+  color: #6b7280;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 999rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.fixed-action {
+  position: fixed;
+  left: 32rpx;
+  right: 32rpx;
+  bottom: 48rpx;
+  z-index: 10;
 }

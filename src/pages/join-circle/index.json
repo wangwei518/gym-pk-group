@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "加入 PK 圈",
+  "usingComponents": {
+    "circle-card": "/components/circle-card/index"
+  }
+}

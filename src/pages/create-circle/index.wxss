@@ -1,0 +1,12 @@
+.create-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.input {
+  margin-top: 24rpx;
+  background: #f8fafc;
+  border-radius: 16rpx;
+  padding: 24rpx;
+}

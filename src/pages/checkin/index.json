@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "今日打卡",
+  "usingComponents": {
+    "sport-tabs": "/components/sport-tabs/index"
+  }
+}

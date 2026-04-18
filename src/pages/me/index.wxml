@@ -1,0 +1,42 @@
+<view class="container me-page">
+  <view class="card profile-card" wx:if="{{user}}">
+    <view class="section-title">{{user.nickName}}</view>
+    <view class="section-subtitle">查看累计数据与历史打卡</view>
+  </view>
+
+  <circle-card wx:if="{{circle}}" circle="{{circle}}" />
+
+  <view class="card" wx:if="{{totals}}">
+    <view class="section-title">累计数据</view>
+    <view class="stats-grid">
+      <view class="stats-item">
+        <text class="stats-value">{{totals.totalPullup}}</text>
+        <text class="stats-label">引体向上</text>
+      </view>
+      <view class="stats-item">
+        <text class="stats-value">{{totals.totalRope}}</text>
+        <text class="stats-label">跳绳</text>
+      </view>
+      <view class="stats-item">
+        <text class="stats-value">{{totals.totalRock}}</text>
+        <text class="stats-label">攀岩</text>
+      </view>
+      <view class="stats-item">
+        <text class="stats-value">{{totals.totalRun}}</text>
+        <text class="stats-label">跑步</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">历史打卡</view>
+    <block wx:if="{{records.length}}">
+      <view class="record-item" wx:for="{{records}}" wx:key="recordId">
+        <text>{{item.type}}</text>
+        <text>{{item.value}}</text>
+        <text>{{item.date}}</text>
+      </view>
+    </block>
+    <empty-state wx:else title="还没有打卡记录" subtitle="今天先打一次卡吧" />
+  </view>
+</view>

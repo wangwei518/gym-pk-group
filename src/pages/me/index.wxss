@@ -1,0 +1,45 @@
+.me-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.stats-grid {
+  margin-top: 24rpx;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20rpx;
+}
+
+.stats-item {
+  background: #f8fafc;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.stats-value {
+  font-size: 42rpx;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.stats-label {
+  color: #6b7280;
+}
+
+.record-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 12rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #e5e7eb;
+}

@@ -1,0 +1,4 @@
+<view class="card circle-card" wx:if="{{circle}}">
+  <view class="section-title">{{circle.name}}</view>
+  <view class="section-subtitle">成员 {{circle.memberCount}} 人</view>
+</view>

@@ -1,0 +1,10 @@
+<view class="ranking-item {{item.isSelf ? 'ranking-item--self' : ''}}" wx:if="{{item}}">
+  <view class="ranking-item__header">
+    <text class="ranking-item__rank">#{{item.rank}}</text>
+    <text class="ranking-item__name">{{item.nickName}}</text>
+    <text class="ranking-item__value">{{item.value}}</text>
+  </view>
+  <view class="ranking-item__track">
+    <view class="ranking-item__bar" style="width: {{maxValue ? (item.value / maxValue) * 100 : 0}}%;"></view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<view class="container leaderboard-page">
+  <circle-card wx:if="{{circle}}" circle="{{circle}}" />
+  <sport-tabs tabs="{{sportTabs}}" current="{{currentSportType}}" bind:change="onSportChange" />
+  <ranking-list wx:if="{{list.length}}" list="{{list}}" type="{{currentSportType}}" />
+  <empty-state wx:else title="还没有排行数据" subtitle="邀请好友加入后开始打卡吧" />
+
+  <view class="fixed-action">
+    <button class="primary-button" bindtap="goToCheckin">+ 今日打卡</button>
+  </view>
+</view>

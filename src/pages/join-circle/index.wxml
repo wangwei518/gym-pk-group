@@ -1,0 +1,10 @@
+<view class="container join-page">
+  <view class="card">
+    <view class="section-title">加入好友 PK 圈</view>
+    <view class="section-subtitle">通过好友分享进入后，可加入固定 PK 圈</view>
+  </view>
+
+  <circle-card wx:if="{{circle}}" circle="{{circle}}" />
+
+  <button class="primary-button" bindtap="confirmJoin" wx:if="{{inviteCode}}">确认加入</button>
+</view>

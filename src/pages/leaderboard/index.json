@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "排行榜",
+  "usingComponents": {
+    "sport-tabs": "/components/sport-tabs/index",
+    "circle-card": "/components/circle-card/index",
+    "ranking-list": "/components/ranking-list/index",
+    "empty-state": "/components/empty-state/index"
+  }
+}

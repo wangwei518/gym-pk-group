@@ -1,0 +1,6 @@
+.leaderboard-page {
+  padding-bottom: 180rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
