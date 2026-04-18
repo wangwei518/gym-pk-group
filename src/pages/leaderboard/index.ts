@@ -26,6 +26,9 @@ Page({
         circle: result.circle,
         list: result.list
       })
+      if (!app.globalData.currentCircleId) {
+        app.globalData.currentCircleId = result.circle.circleId
+      }
     } catch (error) {
       wx.showToast({ title: error instanceof Error ? error.message : '加载排行榜失败', icon: 'none' })
     }
@@ -36,5 +39,18 @@ Page({
   },
   goToCheckin() {
     wx.navigateTo({ url: `/pages/checkin/index?type=${this.data.currentSportType}` })
+  },
+  onShareAppMessage() {
+    const circle = this.data.circle
+    if (!circle?.inviteCode) {
+      return {
+        title: '来一起运动打卡 PK',
+        path: '/pages/create-circle/index'
+      }
+    }
+    return {
+      title: `加入「${circle.name}」好友 PK 圈，一起打卡`,
+      path: `/pages/join-circle/index?inviteCode=${circle.inviteCode}`
+    }
   }
 })

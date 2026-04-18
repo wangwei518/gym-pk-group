@@ -4,3 +4,11 @@
   flex-direction: column;
   gap: 24rpx;
 }
+
+.share-button {
+  background: #ecf3ff;
+  color: #2563eb;
+  border-radius: 999rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+}

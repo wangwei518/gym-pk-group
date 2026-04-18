@@ -8,7 +8,7 @@ Page({
     loading: false
   },
   onLoad(query: Record<string, string>) {
-    const inviteCode = query.inviteCode || ''
+    const inviteCode = decodeURIComponent(query.inviteCode || '')
     this.setData({ inviteCode })
     if (inviteCode) {
       void this.loadShareInfo(inviteCode)
