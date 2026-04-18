@@ -1,0 +1,33 @@
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.auth-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.avatar-button {
+  height: 160rpx;
+  border-radius: 24rpx;
+  background: #f8fafc;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.nickname-input {
+  background: #f8fafc;
+  border-radius: 16rpx;
+  padding: 24rpx;
+}

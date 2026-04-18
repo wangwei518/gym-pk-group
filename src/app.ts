@@ -20,6 +20,12 @@ App({
       this.globalData.userInfo = result.user
       this.globalData.currentCircleId = result.user.defaultCircleId || ''
 
+      const needProfileAuth = !result.user.nickName || result.user.nickName === '微信用户' || !result.user.avatarUrl
+      if (needProfileAuth) {
+        wx.reLaunch({ url: '/pages/auth/index' })
+        return
+      }
+
       if (!result.hasCircle) {
         wx.reLaunch({ url: '/pages/create-circle/index' })
       }
